@@ -19,3 +19,40 @@ The user interface features a glassmorphism design system to provide a premium, 
 ## Dataset Handling
 
 This model is trained on the [MovieLens 32M dataset](https://grouplens.org/datasets/movielens/32m/), containing 32 million ratings and over 71,000 movies. 
+
+**Important:** Due to repository size constraints, the dataset is not version-controlled. The `.gitignore` file explicitly excludes the `data/` directory and all local `.csv` files. You must download the data locally to run the engine.
+
+## Local Environment Setup
+
+Ensure you have Python 3.8+ installed before proceeding.
+
+1. **Clone the Repository**
+   ```bash
+   git clone [https://github.com/abhinavsinha0806/cinematic-discoveries.git](https://github.com/abhinavsinha0806/cinematic-discoveries.git)
+   cd cinematic-discoveries
+   ```
+
+2. **Initialize the Environment**
+   Install the necessary computational and web dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Configure the Data Pipeline**
+   * Download the `ml-32m.zip` dataset directly from [GroupLens](https://grouplens.org/datasets/movielens/32m/).
+   * Extract the archive and create a new directory named `data` in the root folder of this project.
+   * Move `movies.csv`, `ratings.csv`, and `links.csv` into the `data` directory.
+   * Verify that the pandas `read_csv` functions in `app.py` point to `data/movies.csv`, etc.
+
+4. **Launch the Application**
+   ```bash
+   python app.py
+   ```
+   The Flask server will initialize the data structures and compute the matrix. Once complete, access the interface at `http://127.0.0.1:5000/`.
+
+## Authorship & Development
+
+**Developed by Abhinav Sinha**
+
+* **Data Science & Architecture:** The mathematical modeling, Truncated SVD implementation, data pipeline engineering, and backend Flask architecture are entirely my original work, developed from scratch to demonstrate practical applications of machine learning.
+* **UI Development:** The conceptual design, layout, and user experience strategy are my own. I leveraged Google's Gemini as a rapid-prototyping coding assistant to translate my design requirements into the final Tailwind CSS utility classes and HTML structure.
