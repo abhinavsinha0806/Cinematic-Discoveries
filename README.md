@@ -20,7 +20,7 @@ The user interface features a glassmorphism design system to provide a premium, 
 
 This model is trained on the [MovieLens 32M dataset](https://grouplens.org/datasets/movielens/32m/), containing 32 million ratings and over 71,000 movies. 
 
-**Important:** Due to repository size constraints, the dataset is not version-controlled. The `.gitignore` file explicitly excludes the `data/` directory and all local `.csv` files. You must download the data locally to run the engine.
+**Important:** Due to repository size constraints, the dataset is uploaded please access the dataset on the official website.
 
 ## Local Environment Setup
 
